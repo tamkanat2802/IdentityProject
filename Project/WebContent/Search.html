@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<form enctype="multipart/form-data" action="./Servlet3" method="post">
+<div style="height:500px;width:500px;boredr-color:red;border-width:4px;border-style:solid;">
+<label for="entires">Enter details to search: </label>
+<br></br>
+<table>
+<tr>
+<td>IMAGE:</td>
+<td><input type="file" name="image" accept="image/*" onchange="loadFile(event)">
+<img id="output" style="max-width: 200px; max-height: 200px;border-color:blue;border-width:4px;border-style:solid;"/>
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script></td>
+</tr>
+
+<tr>
+<td>NAME:</td>
+<td><input type="text" name="name"></td>
+<br>
+</tr>
+
+<tr>
+<td>DOB:</td>
+<td><input type="text" name="dob"></td>
+</tr>
+
+<tr>
+<td>MOB:</td>
+<td><input type="text" name="mob"></td>
+</tr>
+
+
+
+<tr>
+<td><input type="submit" name="submit"></td>
+</tr>
+
+</table>
+<br></br>
+<a href="Login.html">Home</a>
+</form>
+
+</body>
+</html>
